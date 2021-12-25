@@ -5,25 +5,42 @@ import matplotlib.pyplot as plt
 import joblib
 import seaborn as sb
 import plotly.express as px
-from sklearn.model_selection import train_test_split
-from sklearn.preprocessing import MinMaxScaler
-from sklearn.ensemble import RandomForestRegressor
-from sklearn.metrics import confusion_matrix, accuracy_score
-from sklearn.preprocessing import OneHotEncoder
+from matplotlib import font_manager, rc
+font_path = "C:/Windows/Fonts/NGULIM.TTF"
+font = font_manager.FontProperties(fname=font_path).get_name()
+rc('font', family=font)
 def run_ml_app() :
     df=pd.read_csv('data/도로교통.csv',encoding='CP949')
-    X=df.loc[:,'사망자수']
-    y=df['시도']
-    X=df['사망자수']>10
+    st.subheader('상관계수')
+     
     
+    df_corr=df.iloc[:,3:]
+   
+
+    selected_corr=st.multiselect('상관계수 컬럼 선택',df_corr.columns)
+
+    if len(selected_corr)>0:
+        st.table(df_corr[selected_corr].corr())
+
+        #상관계수를 수치로도 구하고 차트로도 표시하라
+        fig1=sb.pairplot(data=df_corr[selected_corr])
+        
+        st.pyplot(fig1) 
+
+    #유저가 컬럼을 선택하지 않은 경우
+    else:
+        st.write('선택한 컬럼이 없습니다.')
+
     
-    scaler_X=MinMaxScaler()
-    X=scaler_X.fit_transform(X)
-    y=pd.get_dummies(y)
-    scaler_y=MinMaxScaler()
-    y=scaler_y.fit_transform(y)
-    X_train,y_train,X_test,y_test=train_test_split(X,y,test_size=0.25,random_state=22)
-    regressor=RandomForestRegressor(random_state=50)
-    regressor.fit(X_train,y_train)
-    y_pred=regressor.predict(X_test)
-    error=y_test-y_pred
+
+    
+    #고객의 이름을 검색할 수 있는 기능 개발
+    st.subheader('발생건수')
+    #1. 유저한테 검색어 입력을 받습니다.
+    word=st.text_input('시군구를 검색창에 입력하세요')
+    print(word)
+    #2.검색어를 데이터프레임의 Customer Name컬럼에서 검색해서 가져온다
+    df_search=df.loc[df['시군구'].str.contains(word)]
+    # df_search=df.loc[df['시군구'].str.lower().str.contains(word),]
+    #3.화면에 결과를 보여준다
+    st.table(df_search)
