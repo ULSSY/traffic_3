@@ -29,11 +29,11 @@ def run_now_app():
             )
         st.plotly_chart(fig1)    
         fig2 = px.bar(        
-        df,
-        x = "시군구",
-        y = "부상자수",
-        title = "시군구별 부상자수"
-        )
+            df,
+            x = "시군구",
+            y = "부상자수",
+            title = "시군구별 부상자수"
+            )
         st.plotly_chart(fig2)  
         fig3 = px.bar(        
             df,
@@ -50,11 +50,11 @@ def run_now_app():
             )
         st.plotly_chart(fig4)    
         fig5 = px.bar(        
-        df,
-        x = "시군구",
-        y = "부상신고",
-        title = "시군구별 부상신고"
-        )   
+            df,
+            x = "시군구",
+            y = "부상신고",
+            title = "시군구별 부상신고"
+            )   
         st.plotly_chart(fig5) 
          
     elif now=='경기':
@@ -74,11 +74,11 @@ def run_now_app():
             )
         st.plotly_chart(fig1)    
         fig2 = px.bar(        
-        df,
-        x = "시군구",
-        y = "부상자수",
-        title = "시군구별 부상자수"
-        )
+            df,
+            x = "시군구",
+            y = "부상자수",
+            title = "시군구별 부상자수"
+            )
         st.plotly_chart(fig2)  
         fig3 = px.bar(        
             df,
@@ -95,11 +95,11 @@ def run_now_app():
             )
         st.plotly_chart(fig4)    
         fig5 = px.bar(        
-        df,
-        x = "시군구",
-        y = "부상신고",
-        title = "시군구별 부상신고"
-        )   
+            df,
+            x = "시군구",
+            y = "부상신고",
+            title = "시군구별 부상신고"
+            )   
         st.plotly_chart(fig5) 
           
     elif now=='강원'   :
@@ -119,11 +119,11 @@ def run_now_app():
             )
         st.plotly_chart(fig1)    
         fig2 = px.bar(        
-        df,
-        x = "시군구",
-        y = "부상자수",
-        title = "시군구별 부상자수"
-        )
+            df,
+            x = "시군구",
+            y = "부상자수",
+            title = "시군구별 부상자수"
+            )
         st.plotly_chart(fig2)  
         fig3 = px.bar(        
             df,
@@ -140,11 +140,11 @@ def run_now_app():
             )
         st.plotly_chart(fig4)    
         fig5 = px.bar(        
-        df,
-        x = "시군구",
-        y = "부상신고",
-        title = "시군구별 부상신고"
-        )   
+            df,
+            x = "시군구",
+            y = "부상신고",
+            title = "시군구별 부상신고"
+            )   
         st.plotly_chart(fig5) 
           
     elif now=='서울'  :
@@ -164,11 +164,11 @@ def run_now_app():
             )
         st.plotly_chart(fig1)    
         fig2 = px.bar(        
-        df,
-        x = "시군구",
-        y = "부상자수",
-        title = "시군구별 부상자수"
-        )
+            df,
+            x = "시군구",
+            y = "부상자수",
+            title = "시군구별 부상자수"
+            )
         st.plotly_chart(fig2)  
         fig3 = px.bar(        
             df,
@@ -185,57 +185,59 @@ def run_now_app():
             )
         st.plotly_chart(fig4)    
         fig5 = px.bar(        
-        df,
-        x = "시군구",
-        y = "부상신고",
-        title = "시군구별 부상신고"
-        )   
+            df,
+            x = "시군구",
+            y = "부상신고",
+            title = "시군구별 부상신고"
+            )   
         st.plotly_chart(fig5) 
          
     elif now=='세종' :
-        df=df.loc[159,:]
-        fig = px.bar(        
-            df,
-            x = "시군구",
-            y = "발생건수",
-            title = "시군구별 발생건수"
-            )
-        st.plotly_chart(fig)
-        fig1 = px.bar(        
-            df,
-            x = "시군구",
-            y = "사망자수",
-            title = "시군구별 사망자수"
-            )
-        st.plotly_chart(fig1)    
-        fig2 = px.bar(        
-        df,
-        x = "시군구",
-        y = "부상자수",
-        title = "시군구별 부상자수"
-        )
-        st.plotly_chart(fig2)  
-        fig3 = px.bar(        
-            df,
-            x = "시군구",
-            y = "중상",
-            title = "시군구별 중상"
-            )
-        st.plotly_chart(fig3)     
-        fig4 = px.bar(        
-            df,
-            x = "시군구",
-            y = "경상",
-            title = "시군구별 경상"
-            )
-        st.plotly_chart(fig4)    
-        fig5 = px.bar(        
-        df,
-        x = "시군구",
-        y = "부상신고",
-        title = "시군구별 부상신고"
-        )   
-        st.plotly_chart(fig5) 
+       
+        df={'발생건수':4,'사망자수':0,'부상자수':9,'중상':1,'경상':8,'부상신고':0}
+        st.write(df)
+        # fig = px.bar(        
+        #     df,
+        #     x = "시군구",
+        #     y = "발생건수",
+        #     title = "시군구별 발생건수"
+        #     )
+        # st.plotly_chart(fig)
+        # fig1 = px.bar(        
+        #     df,
+        #     x = "시군구",
+        #     y = "사망자수",
+        #     title = "시군구별 사망자수"
+        #     )
+        # st.plotly_chart(fig1)    
+        # fig2 = px.bar(        
+        #     df,
+        #     x = "시군구",
+        #     y = "부상자수",
+        #     title = "시군구별 부상자수"
+        #     )
+        # st.plotly_chart(fig2)  
+        # fig3 = px.bar(        
+        #     df,
+        #     x = "시군구",
+        #     y = "중상",
+        #     title = "시군구별 중상"
+        #     )
+        # st.plotly_chart(fig3)     
+        # fig4 = px.bar(        
+        #     df,
+        #     x = "시군구",
+        #     y = "경상",
+        #     title = "시군구별 경상"
+        #     )
+        # st.plotly_chart(fig4)    
+        # fig5 = px.bar(        
+        #     df,
+        #     x = "시군구",
+        #     y = "부상신고",
+        #     title = "시군구별 부상신고"
+        #     )
+        # st.plotly_chart(fig5)
            
     elif now=='충북'  :
         df=df.loc[55:65,:]
@@ -254,11 +256,11 @@ def run_now_app():
             )
         st.plotly_chart(fig1)    
         fig2 = px.bar(        
-        df,
-        x = "시군구",
-        y = "부상자수",
-        title = "시군구별 부상자수"
-        )
+            df,
+            x = "시군구",
+            y = "부상자수",
+            title = "시군구별 부상자수"
+            )
         st.plotly_chart(fig2)  
         fig3 = px.bar(        
             df,
@@ -275,11 +277,11 @@ def run_now_app():
             )
         st.plotly_chart(fig4)    
         fig5 = px.bar(        
-        df,
-        x = "시군구",
-        y = "부상신고",
-        title = "시군구별 부상신고"
-        )   
+            df,
+            x = "시군구",
+            y = "부상신고",
+            title = "시군구별 부상신고"
+            )   
         st.plotly_chart(fig5) 
     elif now=='충남'  :
         df=df.loc[66:78,:]
@@ -298,11 +300,11 @@ def run_now_app():
             )
         st.plotly_chart(fig1)    
         fig2 = px.bar(        
-        df,
-        x = "시군구",
-        y = "부상자수",
-        title = "시군구별 부상자수"
-        )
+            df,
+            x = "시군구",
+            y = "부상자수",
+            title = "시군구별 부상자수"
+            )
         st.plotly_chart(fig2)  
         fig3 = px.bar(        
             df,
@@ -319,11 +321,11 @@ def run_now_app():
             )
         st.plotly_chart(fig4)    
         fig5 = px.bar(        
-        df,
-        x = "시군구",
-        y = "부상신고",
-        title = "시군구별 부상신고"
-        )   
+            df,
+            x = "시군구",
+            y = "부상신고",
+            title = "시군구별 부상신고"
+            )   
         st.plotly_chart(fig5) 
     elif now=='광주'  :
         df=df.loc[151:152,:]
@@ -342,11 +344,11 @@ def run_now_app():
             )
         st.plotly_chart(fig1)    
         fig2 = px.bar(        
-        df,
-        x = "시군구",
-        y = "부상자수",
-        title = "시군구별 부상자수"
-        )
+            df,
+            x = "시군구",
+            y = "부상자수",
+            title = "시군구별 부상자수"
+            )
         st.plotly_chart(fig2)  
         fig3 = px.bar(        
             df,
@@ -363,11 +365,11 @@ def run_now_app():
             )
         st.plotly_chart(fig4)    
         fig5 = px.bar(        
-        df,
-        x = "시군구",
-        y = "부상신고",
-        title = "시군구별 부상신고"
-        )   
+            df,
+            x = "시군구",
+            y = "부상신고",
+            title = "시군구별 부상신고"
+            )   
         st.plotly_chart(fig5) 
     elif now=='대전'  :
         df=df.loc[153:157,:]
@@ -386,11 +388,11 @@ def run_now_app():
             )
         st.plotly_chart(fig1)    
         fig2 = px.bar(        
-        df,
-        x = "시군구",
-        y = "부상자수",
-        title = "시군구별 부상자수"
-        )
+            df,
+            x = "시군구",
+            y = "부상자수",
+            title = "시군구별 부상자수"
+            )
         st.plotly_chart(fig2)  
         fig3 = px.bar(        
             df,
@@ -407,57 +409,13 @@ def run_now_app():
             )
         st.plotly_chart(fig4)    
         fig5 = px.bar(        
-        df,
-        x = "시군구",
-        y = "부상신고",
-        title = "시군구별 부상신고"
-        )   
+            df,
+            x = "시군구",
+            y = "부상신고",
+            title = "시군구별 부상신고"
+            )   
         st.plotly_chart(fig5) 
-    elif now=='전북'  :
-        df=df.loc[79:91,:]
-        fig = px.bar(        
-            df,
-            x = "시군구",
-            y = "발생건수",
-            title = "시군구별 발생건수"
-            )
-        st.plotly_chart(fig)
-        fig1 = px.bar(        
-            df,
-            x = "시군구",
-            y = "사망자수",
-            title = "시군구별 사망자수"
-            )
-        st.plotly_chart(fig1)    
-        fig2 = px.bar(        
-        df,
-        x = "시군구",
-        y = "부상자수",
-        title = "시군구별 부상자수"
-        )
-        st.plotly_chart(fig2)  
-        fig3 = px.bar(        
-            df,
-            x = "시군구",
-            y = "중상",
-            title = "시군구별 중상"
-            )
-        st.plotly_chart(fig3)     
-        fig4 = px.bar(        
-            df,
-            x = "시군구",
-            y = "경상",
-            title = "시군구별 경상"
-            )
-        st.plotly_chart(fig4)    
-        fig5 = px.bar(        
-        df,
-        x = "시군구",
-        y = "부상신고",
-        title = "시군구별 부상신고"
-        )   
-        st.plotly_chart(fig5)
-    elif now=='전남'  :     
+    elif now=='전북'  :     
         df=df.loc[92:105,:]
         fig = px.bar(        
             df,
@@ -475,11 +433,11 @@ def run_now_app():
             )
         st.plotly_chart(fig1)    
         fig2 = px.bar(        
-        df,
-        x = "시군구",
-        y = "부상자수",
-        title = "시군구별 부상자수"
-        )
+            df,
+            x = "시군구",
+            y = "부상자수",
+            title = "시군구별 부상자수"
+            )
         st.plotly_chart(fig2)  
         fig3 = px.bar(        
             df,
@@ -496,11 +454,11 @@ def run_now_app():
             )
         st.plotly_chart(fig4)    
         fig5 = px.bar(        
-        df,
-        x = "시군구",
-        y = "부상신고",
-        title = "시군구별 부상신고"
-        )   
+            df,
+            x = "시군구",
+            y = "부상신고",
+            title = "시군구별 부상신고"
+            )   
         st.plotly_chart(fig5) 
     elif now=='전남'  :     
         df=df.loc[92:105,:]
@@ -520,11 +478,11 @@ def run_now_app():
             )
         st.plotly_chart(fig1)    
         fig2 = px.bar(        
-        df,
-        x = "시군구",
-        y = "부상자수",
-        title = "시군구별 부상자수"
-        )
+            df,
+            x = "시군구",
+            y = "부상자수",
+            title = "시군구별 부상자수"
+            )
         st.plotly_chart(fig2)  
         fig3 = px.bar(        
             df,
@@ -541,101 +499,11 @@ def run_now_app():
             )
         st.plotly_chart(fig4)    
         fig5 = px.bar(        
-        df,
-        x = "시군구",
-        y = "부상신고",
-        title = "시군구별 부상신고"
-        )   
-        st.plotly_chart(fig5) 
-    elif now=='전남'  :     
-        df=df.loc[92:105,:]
-        fig = px.bar(        
             df,
             x = "시군구",
-            y = "발생건수",
-            title = "시군구별 발생건수"
-            )
-        st.plotly_chart(fig)
-    
-        fig1 = px.bar(        
-            df,
-            x = "시군구",
-            y = "사망자수",
-            title = "시군구별 사망자수"
-            )
-        st.plotly_chart(fig1)    
-        fig2 = px.bar(        
-        df,
-        x = "시군구",
-        y = "부상자수",
-        title = "시군구별 부상자수"
-        )
-        st.plotly_chart(fig2)  
-        fig3 = px.bar(        
-            df,
-            x = "시군구",
-            y = "중상",
-            title = "시군구별 중상"
-            )
-        st.plotly_chart(fig3)     
-        fig4 = px.bar(        
-            df,
-            x = "시군구",
-            y = "경상",
-            title = "시군구별 경상"
-            )
-        st.plotly_chart(fig4)    
-        fig5 = px.bar(        
-        df,
-        x = "시군구",
-        y = "부상신고",
-        title = "시군구별 부상신고"
-        )   
-        st.plotly_chart(fig5) 
-    elif now=='전남'  :     
-        df=df.loc[92:105,:]
-        fig = px.bar(        
-            df,
-            x = "시군구",
-            y = "발생건수",
-            title = "시군구별 발생건수"
-            )
-        st.plotly_chart(fig)
-    
-        fig1 = px.bar(        
-            df,
-            x = "시군구",
-            y = "사망자수",
-            title = "시군구별 사망자수"
-            )
-        st.plotly_chart(fig1)    
-        fig2 = px.bar(        
-        df,
-        x = "시군구",
-        y = "부상자수",
-        title = "시군구별 부상자수"
-        )
-        st.plotly_chart(fig2)  
-        fig3 = px.bar(        
-            df,
-            x = "시군구",
-            y = "중상",
-            title = "시군구별 중상"
-            )
-        st.plotly_chart(fig3)     
-        fig4 = px.bar(        
-            df,
-            x = "시군구",
-            y = "경상",
-            title = "시군구별 경상"
-            )
-        st.plotly_chart(fig4)    
-        fig5 = px.bar(        
-        df,
-        x = "시군구",
-        y = "부상신고",
-        title = "시군구별 부상신고"
-        )   
+            y = "부상신고",
+            title = "시군구별 부상신고"
+            )   
         st.plotly_chart(fig5) 
     elif now=='대구'  :     
         df=df.loc[137:142,:]
@@ -655,11 +523,11 @@ def run_now_app():
             )
         st.plotly_chart(fig1)    
         fig2 = px.bar(        
-        df,
-        x = "시군구",
-        y = "부상자수",
-        title = "시군구별 부상자수"
-        )
+            df,
+            x = "시군구",
+            y = "부상자수",
+            title = "시군구별 부상자수"
+            )
         st.plotly_chart(fig2)  
         fig3 = px.bar(        
             df,
@@ -676,11 +544,11 @@ def run_now_app():
             )
         st.plotly_chart(fig4)    
         fig5 = px.bar(        
-        df,
-        x = "시군구",
-        y = "부상신고",
-        title = "시군구별 부상신고"
-        )   
+            df,
+            x = "시군구",
+            y = "부상신고",
+            title = "시군구별 부상신고"
+            )   
         st.plotly_chart(fig5) 
     elif now=='부산'  :     
         df=df.loc[12:17,:]
@@ -700,11 +568,11 @@ def run_now_app():
             )
         st.plotly_chart(fig1)    
         fig2 = px.bar(        
-        df,
-        x = "시군구",
-        y = "부상자수",
-        title = "시군구별 부상자수"
-        )
+            df,
+            x = "시군구",
+            y = "부상자수",
+            title = "시군구별 부상자수"
+            )
         st.plotly_chart(fig2)  
         fig3 = px.bar(        
             df,
@@ -721,57 +589,59 @@ def run_now_app():
             )
         st.plotly_chart(fig4)    
         fig5 = px.bar(        
-        df,
-        x = "시군구",
-        y = "부상신고",
-        title = "시군구별 부상신고"
-        )   
+            df,
+            x = "시군구",
+            y = "부상신고",
+            title = "시군구별 부상신고"
+            )   
         st.plotly_chart(fig5) 
     elif now=='울산'  :     
-        df=df.loc[158,:]
-        fig = px.bar(        
-            df,
-            x = "시군구",
-            y = "발생건수",
-            title = "시군구별 발생건수"
-            )
-        st.plotly_chart(fig)
+        df={'발생건수':47,'사망자수':5,'부상자수':79,'중상':18,'경상':57,'부상신고':4}
+        st.write(df)
+        # df=df.loc[158,:]
+        # fig = px.bar(        
+        #     df,
+        #     x = "시군구",
+        #     y = "발생건수",
+        #     title = "시군구별 발생건수"
+        #     )
+        # st.plotly_chart(fig)
     
-        fig1 = px.bar(        
-            df,
-            x = "시군구",
-            y = "사망자수",
-            title = "시군구별 사망자수"
-            )
-        st.plotly_chart(fig1)    
-        fig2 = px.bar(        
-        df,
-        x = "시군구",
-        y = "부상자수",
-        title = "시군구별 부상자수"
-        )
-        st.plotly_chart(fig2)  
-        fig3 = px.bar(        
-            df,
-            x = "시군구",
-            y = "중상",
-            title = "시군구별 중상"
-            )
-        st.plotly_chart(fig3)     
-        fig4 = px.bar(        
-            df,
-            x = "시군구",
-            y = "경상",
-            title = "시군구별 경상"
-            )
-        st.plotly_chart(fig4)    
-        fig5 = px.bar(        
-        df,
-        x = "시군구",
-        y = "부상신고",
-        title = "시군구별 부상신고"
-        )   
-        st.plotly_chart(fig5) 
+        # fig1 = px.bar(        
+        #     df,
+        #     x = "시군구",
+        #     y = "사망자수",
+        #     title = "시군구별 사망자수"
+        #     )
+        # st.plotly_chart(fig1)    
+        # fig2 = px.bar(        
+        #     df,
+        #     x = "시군구",
+        #     y = "부상자수",
+        #     title = "시군구별 부상자수"
+        #     )
+        # st.plotly_chart(fig2)  
+        # fig3 = px.bar(        
+        #     df,
+        #     x = "시군구",
+        #     y = "중상",
+        #     title = "시군구별 중상"
+        #     )
+        # st.plotly_chart(fig3)     
+        # fig4 = px.bar(        
+        #     df,
+        #     x = "시군구",
+        #     y = "경상",
+        #     title = "시군구별 경상"
+        #     )
+        # st.plotly_chart(fig4)    
+        # fig5 = px.bar(        
+        #     df,
+        #     x = "시군구",
+        #     y = "부상신고",
+        #     title = "시군구별 부상신고"
+        #     )   
+        # st.plotly_chart(fig5) 
     elif now=='경북'  :     
         df=df.loc[106:122,:]
         fig = px.bar(        
