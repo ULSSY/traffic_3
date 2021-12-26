@@ -8,7 +8,7 @@ from ml_app import run_ml_app
 import matplotlib.pyplot as plt
 import matplotlib.image as img
 import plotly.express as px
-
+import altair as alt
 from eda_app import run_eda_app
 from now_app import run_now_app 
 # from 
@@ -28,9 +28,14 @@ def main():
         df=pd.read_csv('data/도로교통.csv',encoding='CP949')
         df1=df.loc[:,'발생건수':'부상신고']
         
+        st.subheader('시도별 원형 차트')
+        fig1 = px.pie(df, values='발생건수', names='시도')      #plotly pie차트
+        st.plotly_chart(fig1)
+        st.subheader('시도별 요약 그래프')
+        st.bar_chart(df[['발생건수','사망자수','부상자수','중상','경상','부상신고']]  )
         st.write('교통사고 현황을 확인하실 수 있습니다.')
         st.write('왼쪽의 사이드바에서 선택하세요')
-        # video_file = open("data/video.mp4", "rb").read()
+        
 
     elif choice =='시도별 현황' :
         run_eda_app()

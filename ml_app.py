@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 import joblib
 import seaborn as sb
 import plotly.express as px
-
+import altair as alt
 
 
 
@@ -13,7 +13,7 @@ import plotly.express as px
 def run_ml_app() :
     df=pd.read_csv('data/도로교통.csv',encoding='CP949')
     st.subheader('상관계수')
-    sb.set(font="맑은 고딕", rc={"axes.unicode_minus":False}, style='darkgrid') 
+    sb.set(font="Malgun Gothic", rc={"axes.unicode_minus":False}, style='darkgrid') 
     ax = sb.scatterplot(data=df)
     
     df_corr=df.iloc[:,3:]
@@ -44,7 +44,7 @@ def run_ml_app() :
         st.write('상관계수가 +0.7과 +1.0 사이이면, 강한 양적 선형관계')
   
     #고객의 이름을 검색할 수 있는 기능 개발
-    st.subheader('발생건수')
+    st.subheader('특정지역 자료분석')
     #1. 유저한테 검색어 입력을 받습니다.
     word=st.text_input('시군구를 검색창에 입력하세요')
     print(word)
@@ -53,3 +53,9 @@ def run_ml_app() :
     # df_search=df.loc[df['시군구'].str.lower().str.contains(word),]
     #3.화면에 결과를 보여준다
     st.table(df_search)
+    df_search 
+    
+  
+    
+ 
+  
