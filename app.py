@@ -8,6 +8,7 @@ from ml_app import run_ml_app
 import matplotlib.pyplot as plt
 import matplotlib.image as img
 import plotly.express as px
+
 from eda_app import run_eda_app
 from now_app import run_now_app 
 # from 
@@ -15,7 +16,6 @@ from now_app import run_now_app
 
 
 def main():
-    plt.rc('font',family='Malgun GOthic')
     st.title('교통사고 현황 확인하기')
     
 
@@ -27,7 +27,7 @@ def main():
         
         df=pd.read_csv('data/도로교통.csv',encoding='CP949')
         df1=df.loc[:,'발생건수':'부상신고']
-        st.image('data/교통.png',use_column_width=True)
+        st.image('data/교통.jpg',use_column_width=True)
         st.write('교통사고 현황을 확인하실 수 있습니다.')
         st.write('왼쪽의 사이드바에서 선택하세요')
         
