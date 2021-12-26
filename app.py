@@ -28,7 +28,7 @@ def main():
         df=pd.read_csv('data/도로교통.csv',encoding='CP949')
         df1=df.loc[:,'발생건수':'부상신고']
         
-        st.subheader('시도별 원형 차트')
+        st.subheader('시도별 발생건수 원형 차트')
         fig1 = px.pie(df, values='발생건수', names='시도')      #plotly pie차트
         st.plotly_chart(fig1)
         st.subheader('시도별 요약 그래프')
