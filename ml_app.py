@@ -5,10 +5,11 @@ import matplotlib.pyplot as plt
 import joblib
 import seaborn as sb
 import plotly.express as px
-from matplotlib import font_manager, rc
-font_path = "C:/Windows/Fonts/NGULIM.TTF"
-font = font_manager.FontProperties(fname=font_path).get_name()
-rc('font', family=font)
+
+# from matplotlib import font_manager, rc
+# font_path = "C:/Windows/Fonts/NGULIM.TTF"
+# font = font_manager.FontProperties(fname=font_path).get_name()
+# rc('font', family=font)
 def run_ml_app() :
     df=pd.read_csv('data/도로교통.csv',encoding='CP949')
     st.subheader('상관계수')
