@@ -11,6 +11,11 @@ import altair as alt
 
 
 def run_ml_app() :
+    st.sidebar.header('<목록>')
+    st.sidebar.subheader('1)상관계수')
+    st.sidebar.subheader('2)특정지역 자료분석')  
+
+  
     df=pd.read_csv('data/도로교통.csv',encoding='CP949')
     st.subheader('상관계수')
     sb.set(font="Malgun Gothic", rc={"axes.unicode_minus":False}, style='darkgrid') 

@@ -10,7 +10,15 @@ def run_now_app():
     now=st.sidebar.selectbox("왼쪽 사이드바 Select Box", ("인천", "경기", "강원",'서울','세종','충북','충남','광주','대전','전북','전남','대구','부산','울산','경북','경남'))
 
     df=pd.read_csv('data/도로교통.csv',encoding='CP949')
+    st.sidebar.header('<목록>')
+    st.sidebar.subheader('1)시군구별 발생건수 그래프')
+    st.sidebar.subheader('2)시군구별 사망자수 그래프')  
+
+    st.sidebar.subheader('3)시군구별 부상자수 그래프')
+    st.sidebar.subheader('4)시군구별 중상 그래프')
     
+    st.sidebar.subheader('5)시군구별 경상 그래프')
+    st.sidebar.subheader('6)시군구별 부상신고 그래프')
     
     if now=='인천':
         df=df.loc[143:150,:]

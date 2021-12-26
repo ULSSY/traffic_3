@@ -7,6 +7,17 @@ import plotly.express as px
 
 def run_eda_app():
     
+    st.sidebar.header('<목록>')
+    st.sidebar.subheader('1)시도별 발생건수 그래프')
+    st.sidebar.subheader('2)시도별 사망자수 그래프')  
+
+    st.sidebar.subheader('3)시도별 부상자수 그래프')
+    st.sidebar.subheader('4)시도별 중상 그래프')
+    
+    st.sidebar.subheader('5)시도별 경상 그래프')
+    st.sidebar.subheader('6)시도별 부상신고 그래프')
+
+    
 
     df=pd.read_csv('data/도로교통.csv',encoding='CP949')
     df1=df.loc[:,'발생건수':'부상신고']
