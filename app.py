@@ -27,10 +27,11 @@ def main():
         
         df=pd.read_csv('data/도로교통.csv',encoding='CP949')
         df1=df.loc[:,'발생건수':'부상신고']
-        st.image('data/교통.jpg',use_column_width=True)
+        
         st.write('교통사고 현황을 확인하실 수 있습니다.')
         st.write('왼쪽의 사이드바에서 선택하세요')
-        
+        # video_file = open("data/video.mp4", "rb").read()
+
     elif choice =='시도별 현황' :
         run_eda_app()
         
