@@ -14,7 +14,7 @@ def run_ml_app() :
     df=pd.read_csv('data/도로교통.csv',encoding='CP949')
     st.subheader('상관계수')
     sb.set(font="Malgun Gothic", rc={"axes.unicode_minus":False}, style='darkgrid') 
-    ax = sb.scatterplot(data=df)
+    sb.scatterplot(data=df)
     
     df_corr=df.iloc[:,3:]
    
