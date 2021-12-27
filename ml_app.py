@@ -38,7 +38,7 @@ def run_ml_app() :
     else:
         st.write('선택한 컬럼이 없습니다.')
 
-    result=st.button('상관계수 해석 참고')
+    result=st.checkbox('상관계수 해석 참고')
     if result:
         st.write('상관계수가 -1.0과 -0.7 사이이면, 강한 음적 선형관계')
         st.write('상관계수가 -0.7과 -0.3 사이이면, 뚜렷한 음적 선형관계')
